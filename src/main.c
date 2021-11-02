@@ -1,17 +1,17 @@
-#include<stdio.h>
-#include <stdio.h>
-#include "..\include\myfile.h"
+#include<stdio.h>   
+#include "../include/header.h"
+char *sgs_clib_strrchr(const char *str, int c);
+int main()
+{
+    char string[] = "mohammad farhan khan";
+    
+    int character = 'f';
+    
+    char *pch; 
+    pch = sgs_clib_strrchr(string,character);
 
-int main(){
+    printf("Last occurence of %c found at position %ld \n",character,pch-string+1);
+    printf("And the string after the %c is %s",character,pch);
 
-    char name[] = "Abhinav";
-    sgs_clib_convert_to_upper(name);
-
-    printf("After convering to all Caps name is: %s",name);
-#include"../include/hello.h"
-int main(){
-    char a[]="VivekDawar";
-     sgs_clib_convert_to_lower(a);
-    printf("%s",a);
-
+    return 0;
 }
